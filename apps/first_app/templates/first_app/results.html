@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="utf-8">
+        <title>Django Sruvey Form</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'first_app/styles.css' %}">
+    </head>
+    <body>
+        <div class="main">
+            <p>Thank you for submitting this form! You have subitited it {{request.session.counter}} times now. </p>
+            <h1>Submitted information:</h1>
+            <h2>Name: </h2> {{name}}
+            <h2>Location: </h2> {{location}}
+            <h2>Favorite Language</h2> {{language}}
+            <h2>Comments:</h2>{{comment}}
+            <form action="/">
+                <input type='submit' value='Go Back'>
+            </form>
+        </div>
+    </body>
+</html>
